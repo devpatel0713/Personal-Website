@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev's Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div id = "header">
+        <div class="container">
+            <nav>
+                <h1><span class="logo">D</span>EV.</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="images/Dev Patel- Resume copy.pdf" rel= "resume" target="_blank">Resume</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Welcome To My Website</p>
+                <h1>Hi, My Name is <span>D</span>ev Patel</h1>
+            </div>
+        </div>
+    </div>
+<!--------about section -->
+    <div id = "about">
+        <div class = "container">
+            <div class = "row">
+                <div class = "about-col-1">
+                    <img src="images/pictureofme.png" alt="Picture of Me">
+                </div>
+                <div class = "about-col-2">
+                    <h1 class = "subtitle">About Me</h1>
+                    <p>
+                        My name is Dev Patel. I am going to graduate 
+                        from Rutgers University in the next year with a Bachelor of Science in Computer Science. 
+                        Now, I am looking for my first full-time job.I 
+                        cannot say with 100% confidence where I see myself in five years 
+                        or what my big career goal is. The world is changing 
+                        rapidly, and I don't have enough professional experience 
+                        to be certain about such things. However, I know that 
+                        I can provide a fresh take and an extraordinary 
+                        approach to every project. I am always open to 
+                        challenges and constructive feedback. 
+                        I am open-minded and learn new things 
+                        quickly. I want to become a team player 
+                        and dedicate all my skills and talents 
+                        to develop high-quality and unique 
+                        products.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-----Projects-------->
+<div id = "projects">
+    <div class = "container">
+        <h1 class = "subtitle">My Projects</h1>
+        <div class="project-list">
+            <!----<div class = "work">
+                <img src="images/sudoku_project.png">
+                <div class = "layer">
+                    <h3> TITLE OF PROJECT <h3>
+                    <p> descriptions
+                        <link to the app or website or sum>
+            </div>--->
+        </div>
+    </div>
+</div>
+
+<!-----------Contact-->
+<div id = "contact">
+    <div class = "container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class = "fas fa-paper-plane"></i> devpatel3852@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/dev-patel07" target= "_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.github.com/devpatel0713" target= "_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/dev_patel9/?next=%2F" target= "_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name = "submit-to-google-sheet">
+                    <input type="text" name = "Name" placeholder="Please Enter Your Name Here" required>
+                    <input type="text" name = "Email" placeholder = "Please Enter Your Email Here " required> 
+                    <textarea name="Message" rows="6" placeholder="Please Enter Your Message Here"></textarea>
+                    <button type = "submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwU1yHTuQEKFzzL0Ki2TnC-tigwVISisReRHicEtBhGhIekpR7dekjyIKTrn2R_k76P/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
